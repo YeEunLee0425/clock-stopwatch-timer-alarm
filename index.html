@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 구글 애널리틱스 추적 코드 삽입 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QXXMSJHDD2');
+  </script>
+</head>
+<body>
+    <div class="container">
+        <!-- 세계시각 -->
+        <div class="section" id="world-clock">
+            <h2>World Clock</h2>
+            <select id="country-selector">
+                <option value="UTC">Select a Country</option>
+                <option value="Asia/Seoul">South Korea (Seoul)</option>
+                <option value="America/New_York">USA (New York)</option>
+                <option value="Europe/London">UK (London)</option>
+                <option value="Asia/Tokyo">Japan (Tokyo)</option>
+                <option value="Australia/Sydney">Australia (Sydney)</option>
+                <option value="Europe/Paris">France (Paris)</option>
+                <option value="America/Los_Angeles">USA (Los Angeles)</option>
+                <option value="Asia/Calcutta">India (Kolkata)</option>
+                <option value="America/Chicago">USA (Chicago)</option>
+                <option value="Africa/Johannesburg">South Africa (Johannesburg)</option>
+                <option value="America/Argentina/Buenos_Aires">Argentina (Buenos Aires)</option>
+                <option value="Asia/Dubai">UAE (Dubai)</option>
+                <option value="Europe/Berlin">Germany (Berlin)</option>
+                <option value="Africa/Nairobi">Kenya (Nairobi)</option>
+                <option value="Asia/Singapore">Singapore (Singapore)</option>
+                <option value="Europe/Moscow">Russia (Moscow)</option>
+                <option value="Asia/Kolkata">India (New Delhi)</option>
+                <!-- 더 많은 나라 추가 가능 -->
+            </select>
+            <p id="world-time">00:00:00</p>
+        </div>
+        
+        <!-- 스톱워치 -->
+        <div class="section" id="stopwatch">
+            <h2>Stopwatch</h2>
+            <p id="stopwatch-time">00:00:00.000</p>
+            <button id="start-stopwatch">Start</button>
+            <button id="stop-stopwatch">Stop</button>
+            <button id="reset-stopwatch">Reset</button>
+        </div>
+
+        <!-- 타이머 -->
+        <div class="section" id="timer">
+            <h2>Timer</h2>
+            <div class="time-inputs">
+                <input type="number" id="hours-input" placeholder="Hours" min="0">
+                <input type="number" id="minutes-input" placeholder="Minutes" min="0" max="59">
+                <input type="number" id="seconds-input" placeholder="Seconds" min="0" max="59">
+            </div>
+            <div class="timer-buttons">
+                <button id="start-timer">Start Timer</button>
+                <button id="stop-timer">Stop</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+            <p id="timer-display">00:00:00</p>
+        </div>
+
+         <!-- 알람 -->
+         <div class="section" id="alarm">
+            <h2>Alarm</h2>
+            <select id="alarm-country-selector">
+                <option value="UTC">Select Alarm Country</option>
+                <option value="Asia/Seoul">South Korea (Seoul)</option>
+                <option value="America/New_York">USA (New York)</option>
+                <option value="Europe/London">UK (London)</option>
+                <option value="Asia/Tokyo">Japan (Tokyo)</option>
+                <option value="Australia/Sydney">Australia (Sydney)</option>
+                <option value="Europe/Paris">France (Paris)</option>
+                <option value="America/Los_Angeles">USA (Los Angeles)</option>
+                <option value="Asia/Calcutta">India (Kolkata)</option>
+                <option value="America/Chicago">USA (Chicago)</option>
+                <option value="Africa/Johannesburg">South Africa (Johannesburg)</option>
+                <option value="America/Argentina/Buenos_Aires">Argentina (Buenos Aires)</option>
+                <option value="Asia/Dubai">UAE (Dubai)</option>
+                <option value="Europe/Berlin">Germany (Berlin)</option>
+                <option value="Africa/Nairobi">Kenya (Nairobi)</option>
+                <option value="Asia/Singapore">Singapore (Singapore)</option>
+                <option value="Europe/Moscow">Russia (Moscow)</option>
+                <option value="Asia/Kolkata">India (New Delhi)</option>
+                <!-- 더 많은 나라 추가 가능 -->
+            </select>
+            <input type="time" id="alarm-time">
+            <button id="set-alarm">Set Alarm</button>
+            <p id="alarm-status">No alarm set</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
